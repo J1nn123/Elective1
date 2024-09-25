@@ -2,7 +2,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: #fff; /* fallback for old browsers */
+  background: #e5e1e1; /* fallback for old browsers */
+  
 }
 * {
   margin: 0;
@@ -18,6 +19,7 @@ i {
 .navbar-mainbg {
   background-color: #000000;
   padding: 0px;
+  border-radius: 20px;
 }
 #navbarSupportedContent {
   overflow: hidden;
@@ -55,7 +57,7 @@ i {
   right: 20px;
   top: 10px;
   font-size: 14px;
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Roboto';
   display: inline-block;
   padding-right: 3px;
   vertical-align: middle;
@@ -141,3 +143,48 @@ i {
     left: -25px;
   }
 }
+*{
+  padding: 0px;
+  margin:0;
+  box-sizing: border-box;
+
+
+}
+.footer-content{
+max-width:none;
+margin-top: 200px;
+height: 100px;
+background-color:#090909;
+text-align: center;
+  font-size: 15px;
+  justify-content: center;
+  color: #726d6d;
+
+
+
+
+}.socials{
+ list-style: none;
+ display :flex ;
+ align-items: center;
+ justify-content: center;
+ margin:  1rem 0 3rem 0;
+}
+.socials li{
+  margin: 0 10px;
+}
+
+
+
+.socials a{
+  color:#fff;
+
+}.socials a:hover{
+
+  color: aqua;
+}
+  .socials a i{
+font-size: 1.1rem;
+transition: color .4s ease;
+
+  }
