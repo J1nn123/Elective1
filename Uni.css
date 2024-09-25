@@ -1,0 +1,23 @@
+.header{
+    border-style: solid;
+    height: fit-content;
+    margin: auto 25px auto 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header-Left{
+    float: left;
+}
+
+.header-Right{
+    display: flex;
+    float: right;
+    justify-content: space-evenly;
+}
+
+.F-header{
+    display: flex;
+    justify-content: flex-end;
+}
+
