@@ -159,6 +159,7 @@ text-align: center;
   font-size: 15px;
   justify-content: center;
   color: #726d6d;
+  
 
 
 
@@ -187,4 +188,9 @@ text-align: center;
 font-size: 1.1rem;
 transition: color .4s ease;
 
+  } .img-fluid{
+
+    max-width: 100%;
+    height: auto;
   }
+  
