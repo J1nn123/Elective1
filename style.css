@@ -152,14 +152,16 @@ i {
 }
 .footer-content{
 max-width:none;
-margin-top: 200px;
+margin-top: 100px;
 height: 100px;
 background-color:#090909;
 text-align: center;
   font-size: 15px;
   justify-content: center;
   color: #726d6d;
-  
+ 
+  height: 200px;
+margin-top: 2%;
 
 
 
@@ -169,7 +171,7 @@ text-align: center;
  display :flex ;
  align-items: center;
  justify-content: center;
- margin:  1rem 0 3rem 0;
+ margin:  0 3rem 3rem ;
 }
 .socials li{
   margin: 0 10px;
@@ -179,18 +181,52 @@ text-align: center;
 
 .socials a{
   color:#fff;
+  
 
 }.socials a:hover{
 
-  color: aqua;
+  color: rgb(255, 183, 0);
 }
   .socials a i{
 font-size: 1.1rem;
 transition: color .4s ease;
+margin: 10px;
+flex-direction: column;
 
-  } .img-fluid{
-
-    max-width: 100%;
-    height: auto;
   }
-  
+  .d-flex{
+
+    width:auto;
+   
+    padding: 20px;
+    outline-color: #000000;
+  }
+  .carousel-item{
+    margin-top: 10px;
+    outline-width: 300px;
+   
+  }
+  @media screen and (max-width:992px){
+.footer-content{
+width: 35%;
+flex-direction: column;
+}
+.socials{
+width: 30%;
+flex-direction: column;
+}
+  }
+
+
+  @media screen and (max-width:760px){
+
+    .footer-content, .socials{
+width: 100%;
+margin-bottom: 30px;
+flex-direction: column;
+
+    }
+
+  }
+
+ 
