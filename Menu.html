@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Menu</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
+    <script src="https://kit.fontawesome.com/96e37b53f1.js" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #e5e1e1;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container-fluid {
+            flex: 1;
+        }
+
+        .navbar-logo {
+            padding: 15px;
+            color: #fff;
+        }
+
+        .navbar-mainbg {
+            background-color: #000000;
+            padding: 0px;
+            border-radius: 20px;
+        }
+
+        #navbarSupportedContent ul li a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 15px;
+            display: block;
+            padding: 20px 20px;
+            transition: color 0.3s ease;
+        }
+
+        #navbarSupportedContent ul li a:hover,
+        #navbarSupportedContent ul li.active > a {
+            color: #ffffff;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        footer {
+            background-color: #090909;
+            color: #726d6d;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            font-size: 15px;
+        }
+
+        .socials {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0 3rem 3rem;
+        }
+
+        .socials li {
+            margin: 0 10px;
+        }
+
+        .socials a {
+            color: #fff;
+            transition: color 0.4s ease;
+        }
+
+        .socials a:hover {
+            color: rgb(255, 183, 0);
+        }
+
+        .card {
+            transition: transform 0.3s, border-color 0.3s;
+            border-radius: 10px;
+            width: 200px;
+            height: 350px; 
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            margin: 20px;
+            cursor: pointer;
+            border: 10px solid transparent;
+            animation: rainbow 3s linear infinite; 
+            background-color: rgba(255, 255, 255, 0.2);
+            overflow: hidden; 
+        }
+
+        .card:hover {
+            animation: moveCircular 1s forwards, rainbow 3s linear infinite; 
+            box-shadow: 0 0 15px rgba(22, 22, 22, 0.5);
+        }
+
+        .card-img-top {
+            width: 100%; 
+            height: 150px; 
+            object-fit: cover; 
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: #555; 
+            text-align: center; 
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #333; 
+            margin: 5px 0; 
+        }
+
+        .btn-purchase {
+            background-color: #FF9900; 
+            border: none; 
+            color: #fff; 
+            transition: background-color 0.3s ease; 
+        }
+
+        .btn-purchase:hover {
+            background-color: #e68a00; 
+        }
+
+        @media screen and (max-width: 992px) {
+            .footer-content, .socials { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+
+<body>
+ 
+    <nav class="navbar navbar-expand-lg navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="./index.html">FD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="./index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Menu.html"><i class="fa-solid fa-book"></i> Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ContactUs"><i class="far fa-address-book"></i> Contact us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Maps"><i class="fa-regular fa-map"></i>Maps</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Blog"><i class="fa-regular fa-note-sticky"></i>Blogs</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa-solid fa-user"></i> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center my-5">
+            <div class="card">
+                <img src="Pancit.png" class="card-img-top" alt="Product 1 Image">
+                <div class="card-body">
+                    <h5 class="card-title">Pancit</h5>
+                    <p class="card-text">discription sa product</p>
+                    <div class="price">₱19.99</div>
+                    <button class="btn btn-purchase">Purchase</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="adobo.png" class="card-img-top" alt="Product 2 Image">
+                <div class="card-body">
+                    <h5 class="card-title">Chiken Adobo</h5>
+                    <p class="card-text">discription sa product</p>
+                    <div class="price">₱29.99</div>
+                    <button class="btn btn-purchase">Purchase</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="kwek.jpg" class="card-img-top" alt="Product 3 Image">
+                <div class="card-body">
+                    <h5 class="card-title">Kwek Kwek</h5>
+                    <p class="card-text">discription sa product</p>
+                    <div class="price">₱39.99</div>
+                    <button class="btn btn-purchase">Purchase</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="adobo.png" class="card-img-top" alt="Product 4 Image">
+                <div class="card-body">
+                    <h5 class="card-title">Chiken Adobo </h5>
+                    <p class="card-text">discription sa product</p>
+                    <div class="price">₱49.99</div>
+                    <button class="btn btn-purchase">Purchase</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="kwek.jpg" class="card-img-top" alt="Product 5 Image">
+                <div class="card-body">
+                    <h5 class="card-title">Kwek Kwek</h5>
+                    <p class="card-text">discription sa product</p>
+                    <div class="price">₱59.99</div>
+                    <button class="btn btn-purchase">Purchase</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="adobo.png" class="card-img-top" alt="Product 6 Image">
+                <div class="card-body">
+                    <h5 class="card-title">Chiken Adobo</h5>
+                    <p class="card-text">discription sa product</p>
+                    <div class="price">₱69.99</div>
+                    <button class="btn btn-purchase">Purchase</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            IT23B Elec1 (Web System & Technologies)
+            <p>©Copyright All rights reserved 2024</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

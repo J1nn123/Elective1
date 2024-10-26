@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: #e5e1e1; /* fallback for old browsers */
+  background: #e5e1e1; 
   
 }
 * {
@@ -228,5 +228,4 @@ flex-direction: column;
     }
 
   }
-
  
