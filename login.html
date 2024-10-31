@@ -3,49 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+    <title>Login</title>
 
-     
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
-  <!-- Font Awesome -->
-  <link
-  rel="stylesheet"
-  href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
-  <script src="https://kit.fontawesome.com/96e37b53f1.js" crossorigin="anonymous"></script>
-  <!-- Style.css -->
-  <link rel="stylesheet" href="./login.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
+    <script src="https://kit.fontawesome.com/96e37b53f1.js" crossorigin="anonymous"></script>
 
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e5e1e1;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar-mainbg {
+            background-color: #000000;
+            border-radius: 20px;
+        }
+
+        .navbar-logo {
+            padding: 15px;
+            color: #fff;
+        }
+
+        #navbarSupportedContent ul li a {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 15px;
+            display: block;
+            padding: 20px 20px;
+        }
+
+        .login {
+            background: rgba(255, 255, 255, 0.8);
+            max-width: 400px;
+            padding: 40px;
+            margin: 80px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 10px 35px;
+            border: 1px solid #c1b4b4;
+            border-radius: 5px;
+        }
+
+        .input-box i {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #333;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FF9900;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #090909;
+            color: #726d6d;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            font-size: 15px;
+        }
+
+        .socials {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .socials li {
+            margin: 0 10px;
+        }
+
+        .socials a {
+            color: #fff;
+            transition: color 0.4s ease;
+        }
+
+        .socials a:hover {
+            color: rgb(255, 183, 0);
+        }
+    </style>
 </head>
+
 <body>
-    
+
+<!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-mainbg">
+  <!-- Logo -->
+  <a class="navbar-brand navbar-logo" href="./index.html">
+    <img src="./LOGO1.png" alt="Food Daily Logo" style=" height: 50px; border-radius: 60px; ">
+  </a>
+
+  <!-- Collapse Button -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars text-white"></i>
+  </button>
+
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <!-- For Styling -->
+      <div class="hori-selector">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <!-- Nav Links -->
+      <li class="nav-item active">
+        <a class="nav-link" href="#Home">
+          <i class="fa-solid fa-house"></i> Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./Menu.html">
+          <i class="fa-solid fa-book"></i> Menu
+        </a>
+      </li>
+      <!-- Dropdown -->
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          More
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#Contact Us" style="color: black;"><i class="far fa-address-book"></i> Contact Us</a></li>
+          <li><a class="dropdown-item" href="#Maps" style="color: black;"><i class="fa-regular fa-map"></i> Maps</a></li>
+          <li><a class="dropdown-item" href="#Blog" style="color: black;"><i class="fa-regular fa-note-sticky"></i> Blogs</a></li>
+        </ul>
+      </li>
+      <!-- Login Link at the End -->
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">
+          <i class="fa-solid fa-user"></i> Login
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <div class="login">
-<form action="">
-<h1> Login</h1>
-<div class="input-box">
-    <input type ="text" placeholder = "Username"
-    required>
-    
-    <i class="fa-solid fa-user"></i> 
-    </div>
-
-    <div class="input-box">
-    
-            <input type ="password" placeholder = "Password"
-            required>
+    <form action="">
+        <h1>Login</h1>
+        <div class="input-box">
+            <input type="text" placeholder="Username" required>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="Password" required>
             <i class="fa-solid fa-lock"></i>
-            
-
-</div>
-<button class="btn">Login</button>
-
-
+        </div>
+        <button class="btn">Login</button>
+    </form>
 </div>
 
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        IT23B Elec1 (Web System & Technologies)
+        <p>&copy; Copyright All rights reserved 2024</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+        </ul>
+    </div>
+</footer>
 
-
-</form>
-
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

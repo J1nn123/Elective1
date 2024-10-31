@@ -17,6 +17,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            background-image: url(background.jpg);
         }
 
         .container-fluid {
@@ -138,7 +139,17 @@
         .btn-purchase:hover {
             background-color: #e68a00; 
         }
-
+        body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e5e1e1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('background.jpg');
+  background-size: cover; /* Ensures image covers the screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+}
         @media screen and (max-width: 992px) {
             .footer-content, .socials { flex-direction: column; align-items: center; }
         }
@@ -147,23 +158,57 @@
 
 <body>
  
-    <nav class="navbar navbar-expand-lg navbar-mainbg">
-        <a class="navbar-brand navbar-logo" href="./index.html">FD</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars text-white"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="./index.html"><i class="fa-solid fa-house"></i>Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Menu.html"><i class="fa-solid fa-book"></i> Menu</a></li>
-                <li class="nav-item"><a class="nav-link" href="#ContactUs"><i class="far fa-address-book"></i> Contact us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#Maps"><i class="fa-regular fa-map"></i>Maps</a></li>
-                <li class="nav-item"><a class="nav-link" href="#Blog"><i class="fa-regular fa-note-sticky"></i>Blogs</a></li>
-                <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa-solid fa-user"></i> Login</a></li>
-            </ul>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-mainbg">
+    <!-- Logo -->
+    <a class="navbar-brand navbar-logo" href="./index.html">
+      <img src="./LOGO1.png" alt="Food Daily Logo" style=" height: 50px; border-radius: 60px; ">
+    </a>
+  
+    <!-- Collapse Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text-white"></i>
+    </button>
+  
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <!-- For Styling -->
+        <div class="hori-selector">
+          <div class="left"></div>
+          <div class="right"></div>
         </div>
-    </nav>
-
+        <!-- Nav Links -->
+        <li class="nav-item active">
+          <a class="nav-link" href="#Home">
+            <i class="fa-solid fa-house"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./Menu.html">
+            <i class="fa-solid fa-book"></i> Menu
+          </a>
+        </li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#Contact Us" style="color: black;"><i class="far fa-address-book"></i> Contact Us</a></li>
+            <li><a class="dropdown-item" href="#Maps" style="color: black;"><i class="fa-regular fa-map"></i> Maps</a></li>
+            <li><a class="dropdown-item" href="#Blog" style="color: black;"><i class="fa-regular fa-note-sticky"></i> Blogs</a></li>
+          </ul>
+        </li>
+        <!-- Login Link at the End -->
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">
+            <i class="fa-solid fa-user"></i> Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
     <div class="container-fluid">
         <div class="row justify-content-center my-5">
             <div class="card">
