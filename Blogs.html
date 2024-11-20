@@ -21,18 +21,17 @@
         /* Navbar */
         .navbar {
             background-color: #000000;
-            
         }
 
         .navbar-logo {
             color: #fff9f9;
             font-size: 1.5rem;
             padding: 0.5rem 1.5rem;
-            font-family:'Courier New', Courier, monospace;
-
+            font-family: 'Courier New', Courier, monospace;
         }
-        .navbar-logo:hover{
-          color: #ffb700;
+
+        .navbar-logo:hover {
+            color: #ffb700;
         }
 
         .navbar-nav .nav-link {
@@ -53,10 +52,10 @@
         .navbar-toggler-icon {
             background-color: #ffb700;
         }
+
         .navbar-nav {
-    margin-right: 110px;  /* Optional: Add right margin to the navbar items */
-  
-}
+            margin-right: 110px;
+        }
 
         /* Hero Section */
         .hero {
@@ -70,7 +69,7 @@
             align-items: center;
             text-align: center;
             font-size: 2rem;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .hero h1 {
@@ -78,54 +77,42 @@
             font-weight: 700;
         }
 
-        /* Card Styles */
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 12px;
-            overflow: hidden;
-            background-color: white;
+        /* Blog Container */
+        .blog-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-body {
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.8rem;
-            color: #333;
-        }
-
-        .card-text {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        .price {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #ffb700;
-            background-color: #333;
-            padding: 0.5rem 1rem;
+        .blog-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
             border-radius: 20px;
         }
 
+        .likeBt, .dislikeBt {
+            background-color: transparent;
+            border: none;
+            color: #555;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+
+        .liked {
+            color: #28a745;
+        }
+
+        .disliked {
+            color: #dc3545;
+        }
+
         .btn {
-            background-color: #ffb700;
+            background-color: #0b0b0b;
             color: white;
             border-radius: 30px;
             padding: 0.5rem 1.5rem;
@@ -134,8 +121,12 @@
         }
 
         .btn:hover {
-            background-color: #e69300;
-        }
+            
+    opacity: 0.3; /* 50% transparent */
+    background-color: #000000;
+   
+}
+        
 
         /* Footer */
         footer {
@@ -167,26 +158,30 @@
             color: #ffb700;
         }
 
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
+        /* Global layout for the body and footer */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
-            .card {
-                margin-bottom: 1.5rem;
-            }
-        }
+body {
+    display: flex;
+    flex-direction: column;
+}
 
-        @media (max-width: 576px) {
-            .card {
-                width: 100%;
-            }
+.container {
+    flex: 1;  /* This ensures the container takes up all available space */
+}
 
-            .navbar-nav .nav-link {
-                padding: 0.75rem;
-            }
-        }
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: auto;  /* This pushes the footer to the bottom */
+}
+
     </style>
 </head>
 
@@ -223,144 +218,107 @@
 
     <!-- Main Navbar -->
     <nav class="navbar navbar-expand-lg navbar-mainbg">
-      <a class="navbar-brand navbar-logo" href="./index.html">
-          <img src="./LOGO1.png" alt="Food Daily Logo" style="height: 50px; border-radius: 60px;">FOODDAILY
-      </a>
-      <!-- Hamburger menu only for small screens (mobile/tablet) -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars text-white"></i>
-      </button>
-      
-      <!-- Navbar links always visible in desktop view -->
-      <div class="navbar-collapse collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-              <li class="nav-item active">
-                  <a class="nav-link" href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="./Blogs.html"><i class="fa-solid fa-book"></i> Blogs</a>
-              </li>
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      More
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#Contact Us" style="color: black;"><i class="far fa-address-book"></i> Contact Us</a></li>
-                      <li><a class="dropdown-item" href="#Maps" style="color: black;"><i class="fa-regular fa-map"></i> Maps</a></li>
-                      <li><a class="dropdown-item" href="#Maps" style="color: black;"><i class="fa-regular fa-address-card"></i> About</a></li>
-                  </ul>
-              </li>
-             
-          </ul>
-      </div>
-  </nav>
+        <a class="navbar-brand navbar-logo" href="./index.html">
+            <img src="./LOGO1.png" alt="Food Daily Logo" style="height: 50px; border-radius: 60px;"> FOODDAILY
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="navbar-collapse collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Blogs.html"><i class="fa-solid fa-book"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        More
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#Contact Us" style="color: black;"><i class="far fa-address-book"></i> Contact Us</a></li>
+                        <li><a class="dropdown-item" href="#Maps" style="color: black;"><i class="fa-regular fa-map"></i> Maps</a></li>
+                        <li><a class="dropdown-item" href="#Maps" style="color: black;"><i class="fa-regular fa-address-card"></i> About</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- Blog Post Section -->
     <div class="container mt-5">
-        <!-- Blog Post Section: Share Your Blog and Recent Posts side by side -->
         <div class="row">
             <div class="col-md-6">
                 <!-- Blog Post Form -->
-                <h2 class="mt-4">Share Your Blog</h2>
+                <h2 class="mt-4">Share Your Thoughts Today</h2>
                 <textarea id="myBlog" class="form-control" rows="4" placeholder="Write your blog here..."></textarea>
-                <button id="post" class="btn btn-primary mt-2">Post Blog</button>
+                <button id="post" class="btn btn-primary mt-2">Post</button>
             </div>
 
             <div class="col-md-6">
-                <!-- Blog Container -->
-                <div id="blogContainer" class="mt-4"></div>
-            </div>
-        </div>
-
-        <!-- Food Blog Cards -->
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-5">
-            <div class="col">
-                <div class="card">
-                    <img src="kwek.jpg" class="card-img-top" alt="Pancit">
-                    <div class="card-body">
-                        <h5 class="card-title">Pancit</h5>
-                        <p class="card-text">Delicious Filipino Pancit with a savory mix of noodles and vegetables.</p>
-                       
-                        <a href="#" class="btn">Order Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="adobo.png" class="card-img-top" alt="Chicken Adobo">
-                    <div class="card-body">
-                        <h5 class="card-title">Chicken Adobo</h5>
-                        <p class="card-text">A classic Filipino dish made with chicken, soy sauce, and vinegar.</p>
-                      
-                        <a href="#" class="btn">Order Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="kwek.jpg" class="card-img-top" alt="Kwek Kwek">
-                    <div class="card-body">
-                        <h5 class="card-title">Kwek Kwek</h5>
-                        <p class="card-text">Crispy and savory quail eggs, a favorite street food in the Philippines.</p>
-                        
-                        <a href="#" class="btn">Order Now</a>
-                    </div>
+                <!-- Blog Container for the posts -->
+                <div id="blogContainer" class="mt-4">
+                    <!-- Posts will appear here -->
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Footer Section -->
     <footer>
-        <p>© 2024 Food Daily Blog</p>
+        <p>&copy; 2024 FoodDaily. All Rights Reserved.</p>
         <ul class="socials">
-            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
         </ul>
     </footer>
 
     <script>
-        const postBtn = document.getElementById('post');
-        const blogContainer = document.getElementById('blogContainer');
-        const content = document.getElementById('myBlog');
+        // JavaScript for posting blogs and handling likes and dislikes
+        document.getElementById("post").addEventListener("click", function() {
+            let blogContent = document.getElementById("myBlog").value;
+            if (blogContent.trim() !== "") {
+                const blogContainer = document.getElementById("blogContainer");
+                const blogPost = document.createElement("div");
+                blogPost.classList.add("blog-card");
 
-        postBtn.addEventListener('click', () => {
-            const blog = content.value;
-            if (!blog) return;
+                blogPost.innerHTML = `
+                    <p>${blogContent}</p>
+                    <button class="likeBt"><i class="fas fa-thumbs-up"></i> Like <span class="likeCount">0</span></button>
+                    <button class="dislikeBt"><i class="fas fa-thumbs-down"></i> Dislike <span class="dislikeCount">0</span></button>
+                `;
+                
+                // Prepend the new post to the top of the container
+                blogContainer.prepend(blogPost);
+                document.getElementById("myBlog").value = "";
 
-            const blogFormat = `
-                <div class="blog-card">
-                    <div class="card-body">
-                        <p>${blog}</p>
-                        <div class="d-flex justify-content-between">
-                            <button class="likeBt"><i class="fa-solid fa-thumbs-up"></i> 0</button>
-                            <button class="dislikeBt"><i class="fa-solid fa-thumbs-down"></i> 0</button>
-                        </div>
-                    </div>
-                </div>
-            `;
-            blogContainer.innerHTML += blogFormat;
+                // Adding event listeners to Like and Dislike buttons
+                const likeButton = blogPost.querySelector(".likeBt");
+                const dislikeButton = blogPost.querySelector(".dislikeBt");
 
-            const likeBt = blogContainer.lastElementChild.querySelector('.likeBt');
-            const dislikeBt = blogContainer.lastElementChild.querySelector('.dislikeBt');
+                let likeCount = 0;
+                let dislikeCount = 0;
 
-            likeBt.addEventListener('click', () => {
-                let likes = parseInt(likeBt.innerText.split(' ')[1], 10);
-                likes += 1;
-                likeBt.innerHTML = `<i class="fa-solid fa-thumbs-up"></i> ${likes}`;
-            });
+                likeButton.addEventListener("click", function() {
+                    likeCount++;
+                    blogPost.querySelector(".likeCount").textContent = likeCount;
+                    likeButton.classList.add("liked");
+                    dislikeButton.classList.remove("disliked");
+                });
 
-            dislikeBt.addEventListener('click', () => {
-                let dislikes = parseInt(dislikeBt.innerText.split(' ')[1], 10);
-                dislikes += 1;
-                dislikeBt.innerHTML = `<i class="fa-solid fa-thumbs-down"></i> ${dislikes}`;
-            });
-
-            content.value = '';
+                dislikeButton.addEventListener("click", function() {
+                    dislikeCount++;
+                    blogPost.querySelector(".dislikeCount").textContent = dislikeCount;
+                    dislikeButton.classList.add("disliked");
+                    likeButton.classList.remove("liked");
+                });
+            }
         });
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
