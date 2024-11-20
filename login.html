@@ -25,23 +25,36 @@
             min-height: 100vh;
         }
 
-        .navbar-mainbg {
-            background-color: #000000;
-            border-radius: 20px;
-        }
+        /* Navbar */
+.navbar-mainbg {
+    background-color: #000000;
+    border-radius: 20px;
+}
 
-        .navbar-logo {
-            padding: 15px;
-            color: #fff;
-        }
+.navbar-logo {
+    padding: 15px;
+    color: #fff;
+}
 
-        #navbarSupportedContent ul li a {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 15px;
-            display: block;
-            padding: 20px 20px;
-        }
+#navbarSupportedContent ul li a {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    display: block;
+    padding: 20px 20px;
+    transition: color 0.3s;
+}
 
+#navbarSupportedContent ul li a:hover {
+    color: #FF9900;
+}
+
+.navbar-toggler {
+    border-color: #FF9900;
+}
+
+.navbar-toggler-icon {
+    background-color: #FF9900;
+}
         .login {
             background: rgba(255, 255, 255, 0.8);
             max-width: 400px;
@@ -117,55 +130,36 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg navbar-mainbg">
- 
-  <a class="navbar-brand navbar-logo" href="./index.html">
-    <img src="./LOGO1.png" alt="Food Daily Logo" style=" height: 50px; border-radius: 60px; ">
-  </a>
-
-  
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <i class="fas fa-bars text-white"></i>
-  </button>
-
- 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-     
-      <div class="hori-selector">
-        <div class="left"></div>
-        <div class="right"></div>
-      </div>
-     
-      <li class="nav-item active">
-        <a class="nav-link" href="./index.html">
-          <i class="fa-solid fa-house"></i> Home
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="./Menu.html">
-          <i class="fa-solid fa-book"></i> Menu
-        </a>
-      </li>
-     
-      <li class="nav-item dropdown ">
-        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          More
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="#Contact Us" style="color: black;"><i class="far fa-address-book"></i> Contact Us</a></li>
-          <li><a class="dropdown-item" href="#Maps" style="color: black;"><i class="fa-regular fa-map"></i> Maps</a></li>
-          <li><a class="dropdown-item" href="#Blog" style="color: black;"><i class="fa-regular fa-note-sticky"></i> Blogs</a></li>
-        </ul>
-      </li>
-      
-      <li class="nav-item">
-        <a class="nav-link" href="login.html">
-          <i class="fa-solid fa-user"></i> Login
-        </a>
-      </li>
-    </ul>
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-mainbg">
+    <a class="navbar-brand navbar-logo" href="./index.html">
+      <img src="./LOGO1.png" alt="Food Daily Logo" style="height: 50px; border-radius: 60px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./Blogs.html"><i class="fa-solid fa-book"></i> Blogs</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#Contact Us" style="color: black;"><i class="far fa-address-book"></i> Contact Us</a></li>
+            <li><a class="dropdown-item" href="#Maps" style="color: black;"><i class="fa-regular fa-map"></i> Maps</a></li>
+            <li><a class="dropdown-item" href="#Blog" style="color: black;"><i class="fa-regular fa-note-sticky"></i> Blogs</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html"><i class="fa-solid fa-user"></i> Login</a>
+        </li>
+      </ul>
+    </div>
 </nav>
 <div class="login">
     <form action="">
